@@ -1,0 +1,168 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* light gray background */
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styles */
+header {
+//background: #f4f4f4;
+    padding: 20px 0;
+    background-color: #007BFF; /* blue button */
+    color: #fff; /* white text */
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header .logo img {
+    max-height: 40px; /* Adjust this value to fit your logo size */
+    width: auto;
+}
+
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul.navigation li a:hover {
+    color: #007BFF;
+}
+
+header ul.navigation {
+    display: flex;
+    list-style-type: none;
+}
+
+header ul.navigation li {
+    margin-left: 20px;
+}
+
+.hamburger-menu {
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.navigation {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navigation.active {
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+section {
+    margin-bottom: 60px;
+}
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    header ul.navigation {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #f4f4f4;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header ul.navigation li {
+        margin-left: 0;
+        margin-bottom: 1rem;
+        padding-left: 1rem;
+    }
+
+    header ul.navigation li a {
+        display: block;
+        padding: 0.5rem 0;
+    }
+    header ul.navigation li a:hover {
+        color: #007BFF;
+    }
+    .hamburger-menu {
+        display: block;
+    }
+}
+
+
+/* Hero section styles */
+.hero {
+    background: #333;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+x
+.hero p {
+    font-size: 24px;
+}
+
+.hero .cta-button {
+    display: inline-block;
+    /*background: #f4f4f4;*/
+    font-size: 24px; /* Increase font size */
+    background-color: #007BFF;
+    /*color: #333;*/
+    color: #fff; /* Change text color to white */
+    padding: 15px 30px; /* Increase padding */
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+.hero .cta-button:hover {
+    background: #ccc;
+    color: #fff;
+}
+
+/* Services, Testimonials, Blog, and Contact sections */
+.services, .testimonials, .auto-tips, .contact {
+    padding: 60px 0;
+}
+
+/* Footer styles */
+footer {
+    /*background: #333;*/
+    background-color: #007BFF; /* blue footer */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
